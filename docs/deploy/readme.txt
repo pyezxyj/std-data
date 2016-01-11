@@ -18,7 +18,7 @@
 
 2，打包
   rm -rf data.tar.gz
-  tar zcvf data.tar.gz xn-bizframe/
+  tar zcvf data.tar.gz std-data/
   scp -P57652 ./data.tar.gz root@120.55.113.192:/home/
   
 3，部署
@@ -27,19 +27,19 @@
   
   cd /home/tomcat_STD_data/webapps
   rm -rf data.tar.gz
-  cp -f ./xn-bizframe/WEB-INF/classes/application.properties .
-  cp -f ./xn-bizframe/WEB-INF/classes/config.properties .
-  rm -rf xn-bizframe/
+  cp -f ./std-data/WEB-INF/classes/application.properties .
+  cp -f ./std-data/WEB-INF/classes/config.properties .
+  rm -rf std-data/
   mv /home/data.tar.gz .
   tar zxvf data.tar.gz
-  mv -f application.properties ./xn-bizframe/WEB-INF/classes/
-  mv -f config.properties ./xn-bizframe/WEB-INF/classes/
+  mv -f application.properties ./std-data/WEB-INF/classes/
+  mv -f config.properties ./std-data/WEB-INF/classes/
 4,起停tomcat_develop_account
 
 
 
-http://121.43.101.148:8602/xn-pop/api
-http://115.29.140.31:8602/xn-pop/api
+http://120.55.113.192:8905/std-data/api
+
 
 
 
