@@ -1,0 +1,1 @@
+TRUNCATE tsys_dict;
