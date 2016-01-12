@@ -16,7 +16,9 @@
 	<bean id="dictBO" class="com.std.data.bo.impl.DictBOImpl">
 		<property name="paginableDAO" ref="dictDAOImpl" />
 	</bean>
-	
+	<bean id="contractTemplateBO" class="com.std.data.bo.impl.ContractTemplateBOImpl">
+		<property name="paginableDAO" ref="contractTemplateDAOImpl" />
+	</bean>
 	
 	
 </beans>

@@ -4,6 +4,7 @@
 	<typeAliases>	
 	
 		<typeAlias alias="dict" type="com.std.data.domain.Dict" />
+		<typeAlias alias="contractTemplate" type="com.std.data.domain.ContractTemplate" />
 		
 	</typeAliases>	
 </configuration>	
