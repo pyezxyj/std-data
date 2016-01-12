@@ -12,7 +12,6 @@ import java.util.List;
 
 import com.std.data.base.IPaginableBO;
 import com.std.data.domain.Dict;
-import com.std.data.enums.EDictKey;
 
 /** 
  * @author: xieyj 
@@ -36,23 +35,4 @@ public interface IDictBO extends IPaginableBO<Dict> {
 
     public List<Dict> queryDictList(Dict condition);
 
-    /**
-     * 获取系统配置参数
-     * @param key
-     * @return 
-     * @create: 2015年11月25日 上午11:29:02 myb858
-     * @history:
-     */
-    public String getSystemConfig(EDictKey key);
-
-    /**
-     * value尾部加字符串
-     * @param id
-     * @param addStr
-     * @create: 2015年11月29日 下午1:38:38 myb858
-     * @history:
-     */
-    public void addValue(Long id, String addStr);
-
-    public void refreshValue(Long id, String value);
 }

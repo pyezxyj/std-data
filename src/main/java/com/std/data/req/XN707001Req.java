@@ -9,6 +9,9 @@ public class XN707001Req extends APageReq {
     // id
     private String id;
 
+    // 类型
+    private String type;
+
     // 父ID
     private String pId;
 
@@ -21,6 +24,14 @@ public class XN707001Req extends APageReq {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getpId() {

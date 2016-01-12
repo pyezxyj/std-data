@@ -7,6 +7,8 @@ public class XN707004Req {
     // 父ID(必填)
     private String pId;
 
+    private String type;
+
     // key(必填)
     private String key;
 
@@ -33,6 +35,14 @@ public class XN707004Req {
 
     public void setpId(String pId) {
         this.pId = pId;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getKey() {

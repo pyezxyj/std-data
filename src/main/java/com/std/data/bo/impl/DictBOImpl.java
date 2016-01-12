@@ -3,7 +3,6 @@ package com.std.data.bo.impl;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -12,7 +11,6 @@ import com.std.data.base.PaginableBOImpl;
 import com.std.data.bo.IDictBO;
 import com.std.data.dao.IDictDAO;
 import com.std.data.domain.Dict;
-import com.std.data.enums.EDictKey;
 import com.std.data.exception.BizException;
 
 /**
@@ -123,35 +121,4 @@ public class DictBOImpl extends PaginableBOImpl<Dict> implements IDictBO {
         return list;
     }
 
-    @Override
-    public String getSystemConfig(EDictKey key) {
-        List<Dict> list = queryDictListByKey(key.getCode());
-        if (!CollectionUtils.isNotEmpty(list)) {
-            throw new BizException("XN000000", "系统参数" + key.getCode() + "未配置");
-        }
-        Dict ele = list.get(0);
-        return ele.getValue();
-    }
-
-    @Override
-    public void addValue(Long id, String addStr) {
-        Dict dict = this.getDict(id);
-        dict.setValue(dict.getValue() + addStr);
-        dict.setUpdater("test");
-        dict.setUpdateDatetime(new Date());
-        dict.setRemark("Spring事务测试");
-        dictDAO.update(dict);
-    }
-
-    @Override
-    public void refreshValue(Long id, String value) {
-        Dict dict = new Dict();
-        dict.setId(id);
-        dict.setValue(value);
-        dict.setUpdater("test");
-        dict.setUpdateDatetime(new Date());
-        dict.setRemark("Spring事务测试");
-        dictDAO.updateValue(dict);
-
-    }
 }

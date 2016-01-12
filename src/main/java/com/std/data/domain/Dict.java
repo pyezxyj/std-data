@@ -13,6 +13,9 @@ public class Dict extends ABaseDO {
 
     private Long id;
 
+    // 类别:0表示系统参数，1表示数据字典
+    private String type;
+
     // 父ID
     private Long pId;
 
@@ -43,6 +46,14 @@ public class Dict extends ABaseDO {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public Long getpId() {

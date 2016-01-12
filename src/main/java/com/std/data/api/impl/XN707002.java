@@ -23,16 +23,16 @@ public class XN707002 extends AProcessor {
 
     @Override
     public Object doBusiness() throws BizException {
-        dictAO.addDict(StringValidater.toLong(req.getpId()), req.getKey(),
-            req.getValue(), req.getCreator(), req.getRemark());
+        dictAO.addDict(StringValidater.toLong(req.getpId()), req.getType(),
+            req.getKey(), req.getValue(), req.getCreator(), req.getRemark());
         return new XN707002Res();
     }
 
     @Override
     public void doCheck(String inputparams) throws ParaException {
         req = JsonUtil.json2Bean(inputparams, XN707002Req.class);
-        StringValidater.validateBlank(req.getpId(), req.getKey(),
-            req.getValue(), req.getCreator());
+        StringValidater.validateBlank(req.getpId(), req.getType(),
+            req.getKey(), req.getValue(), req.getCreator());
 
     }
 

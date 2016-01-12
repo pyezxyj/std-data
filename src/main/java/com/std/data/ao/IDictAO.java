@@ -26,6 +26,7 @@ public interface IDictAO {
     /**
      * 新增数据字典
      * @param pId
+     * @param type
      * @param key
      * @param value
      * @param creator
@@ -34,8 +35,8 @@ public interface IDictAO {
      * @create: 2015年10月29日 下午4:09:34 myb858
      * @history:
      */
-    public int addDict(Long pId, String key, String value, String creator,
-            String remark);
+    public int addDict(Long pId, String type, String key, String value,
+            String creator, String remark);
 
     /**
      * 删除数据字典
@@ -50,6 +51,7 @@ public interface IDictAO {
      * 修改数据字典
      * @param id
      * @param pId
+     * @param type
      * @param key
      * @param value
      * @param updater
@@ -58,8 +60,8 @@ public interface IDictAO {
      * @create: 2015年10月29日 下午4:10:17 myb858
      * @history:
      */
-    public int editDict(Long id, Long pId, String key, String value,
-            String updater, String remark);
+    public int editDict(Long id, Long pId, String type, String key,
+            String value, String updater, String remark);
 
     /**
      * @param start

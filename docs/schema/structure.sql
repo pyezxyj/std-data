@@ -7,6 +7,7 @@
 DROP TABLE IF EXISTS `tsys_dict`;
 CREATE TABLE `tsys_dict` (
   `id` bigint(32) NOT NULL AUTO_INCREMENT COMMENT '编号 PK',
+  `type` char(1) NOT NULL COMMENT '类别',
   `p_id` bigint(32) NOT NULL COMMENT '父编号',
   `dkey` varchar(32) NOT NULL COMMENT 'key',
   `dvalue` varchar(64) NOT NULL COMMENT 'value',

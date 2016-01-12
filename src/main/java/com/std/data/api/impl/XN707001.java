@@ -27,6 +27,7 @@ public class XN707001 extends AProcessor {
     public Object doBusiness() throws BizException {
         Dict condition = new Dict();
         condition.setId(StringValidater.toLong(req.getId()));
+        condition.setType(req.getType());
         condition.setpId(StringValidater.toLong(req.getpId()));
         condition.setKey(req.getKey());
 

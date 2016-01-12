@@ -35,8 +35,8 @@ public class DictAOImpl implements IDictAO {
     }
 
     @Override
-    public int addDict(Long pId, String key, String value, String creator,
-            String remark) {
+    public int addDict(Long pId, String type, String key, String value,
+            String creator, String remark) {
         if (pId > 0) {
             if (!dictBO.isDictExist(pId)) {
                 throw new BizException("ZC000001", "数据字典父节点序号不存在");
@@ -44,6 +44,7 @@ public class DictAOImpl implements IDictAO {
         }
         Dict data = new Dict();
         data.setpId(pId);
+        data.setType(type);
         data.setKey(key);
         data.setValue(value);
         data.setCreator(creator);
@@ -64,8 +65,8 @@ public class DictAOImpl implements IDictAO {
     }
 
     @Override
-    public int editDict(Long id, Long pId, String key, String value,
-            String updater, String remark) {
+    public int editDict(Long id, Long pId, String type, String key,
+            String value, String updater, String remark) {
         if (!dictBO.isDictExist(id)) {
             throw new BizException("ZC000001", "数据字典节点序号不存在");
         }
@@ -75,6 +76,7 @@ public class DictAOImpl implements IDictAO {
         Dict data = new Dict();
         data.setId(id);
         data.setpId(pId);
+        data.setType(type);
         data.setKey(key);
         data.setValue(value);
         data.setUpdater(updater);
