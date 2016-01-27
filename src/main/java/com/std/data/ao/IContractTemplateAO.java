@@ -16,6 +16,8 @@ public interface IContractTemplateAO {
     Paginable<ContractTemplate> queryContractTemplatePage(int start, int limit,
             ContractTemplate condition);
 
+    ContractTemplate getContractTemplate(String type);
+
     Long addContractTemplate(String title, String content, String type,
             String status, String creator, String remark);
 

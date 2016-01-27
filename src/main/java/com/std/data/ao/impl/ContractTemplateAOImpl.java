@@ -2,6 +2,8 @@ package com.std.data.ao.impl;
 
 import java.util.List;
 
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,21 @@ public class ContractTemplateAOImpl implements IContractTemplateAO {
     public Paginable<ContractTemplate> queryContractTemplatePage(int start,
             int limit, ContractTemplate condition) {
         return contractTemplateBO.getPaginable(start, limit, condition);
+    }
+
+    @Override
+    public ContractTemplate getContractTemplate(String type) {
+        ContractTemplate data = null;
+        if (StringUtils.isNotBlank(type)) {
+            ContractTemplate condition = new ContractTemplate();
+            condition.setType(type);
+            List<ContractTemplate> list = contractTemplateBO
+                .queryContractTemplateList(condition);
+            if (CollectionUtils.isNotEmpty(list)) {
+                data = list.get(0);
+            }
+        }
+        return data;
     }
 
     @Override
