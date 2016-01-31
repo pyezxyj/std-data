@@ -70,9 +70,10 @@ public class DictAOImpl implements IDictAO {
         if (!dictBO.isDictExist(id)) {
             throw new BizException("ZC000001", "数据字典节点序号不存在");
         }
-        if (!dictBO.isDictExist(pId)) {
+        if (pId > 0 && !dictBO.isDictExist(pId)) {
             throw new BizException("ZC000001", "数据字典父节点序号不存在");
         }
+
         Dict data = new Dict();
         data.setId(id);
         data.setpId(pId);
@@ -83,5 +84,4 @@ public class DictAOImpl implements IDictAO {
         data.setRemark(remark);
         return dictBO.refreshDict(data);
     }
-
 }
