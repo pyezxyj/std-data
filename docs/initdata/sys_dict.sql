@@ -195,3 +195,45 @@ INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_da
 INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`remark`) VALUES (4082,'1',4081,'repay_status','1','admin',now(),'待还');
 INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`remark`) VALUES (4083,'1',4081,'repay_status','2','admin',now(),'线下已还');
 INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`remark`) VALUES (4084,'1',4081,'repay_status','3','admin',now(),'线上已还');
+
+/*
+v1.1.0 add
+*/
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4085,'1',0,'标准状态','normal_status','admin',now(),NULL,NULL,'');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4086,'1',4085,'normal_status','0','admin',now(),NULL,NULL,'待审核');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4087,'1',4085,'normal_status','1','admin',now(),NULL,NULL,'审核通过');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4088,'1',4085,'normal_status','2','admin',now(),NULL,NULL,'审核不通过');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4089,'1',0,'账户性质','kind','admin',now(),NULL,NULL,'');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4090,'1',4089,'kind','1','admin',now(),NULL,NULL,'一般户');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4091,'1',4089,'kind','2','admin',now(),NULL,NULL,'FTN');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4092,'1',4089,'kind','3','admin',now(),NULL,NULL,'FTE');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4093,'1',4089,'kind','4','admin',now(),NULL,NULL,'NRA');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4094,'1',4089,'kind','5','admin',now(),NULL,NULL,'OSA');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4095,'1',0,'币种','currency','admin',now(),NULL,NULL,'');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4096,'1',4095,'currency','CNY','admin',now(),NULL,NULL,'人民币');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4097,'1',4095,'currency','USB','admin',now(),'xieyj','2016-03-09 20:36:04','美元');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4098,'1',0,'回单方式','hd_way','admin',now(),NULL,NULL,'');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4099,'1',4098,'hd_way','1','admin',now(),NULL,NULL,'邮寄');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4100,'1',4098,'hd_way','2','admin',now(),NULL,NULL,'网银卡');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4101,'1',4098,'hd_way','3','admin',now(),NULL,NULL,'网银');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4102,'1',4098,'hd_way','4','admin',now(),NULL,NULL,'邮寄+网银卡');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4103,'1',4098,'hd_way','5','admin',now(),NULL,NULL,'邮寄+网银');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4105,'1',0,'余额对账单方式','yedzd_way','admin',now(),NULL,NULL,'');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4106,'1',4105,'yedzd_way','1','admin',now(),NULL,NULL,'邮寄');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4107,'1',4105,'yedzd_way','2','admin',now(),NULL,NULL,'网银');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4108,'1',4105,'yedzd_way','3','admin',now(),NULL,NULL,'邮寄+网银');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4109,'1',0,'流水对账方式','lsdzd_way','admin',now(),NULL,NULL,'');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4110,'1',4109,'lsdzd_way','1','admin',now(),NULL,NULL,'邮寄');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4111,'1',4109,'lsdzd_way','2','admin',now(),NULL,NULL,'网银');
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4112,'1',4109,'lsdzd_way','3','admin',now(),NULL,NULL,'邮寄+网银');
+
+/*
+v1.1.1 add
+*/
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4113,'1',3012,'company_kyc_status','0','admin',now(),NULL,NULL,'图片未上传');
+
+
+/*
+v1.2.0 add
+*/
+INSERT INTO `tsys_dict` (`id`,`type`,`p_id`,`dkey`,`dvalue`,`creator`,`create_datetime`,`updater`,`update_datetime`,`remark`) VALUES (4114,'1',1011,'id_kind','2','admin',now(),NULL,NULL,'护照');
